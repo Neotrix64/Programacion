@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-04-10T19:29:47.872Z",
-    "end": "2024-04-10T19:29:56.764Z",
-    "duration": 8892,
+    "start": "2024-04-10T20:57:03.385Z",
+    "end": "2024-04-10T20:57:12.912Z",
+    "duration": 9527,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "377f18c8-4186-4a72-96aa-a4f15179e220",
+      "uuid": "9897bf8c-8223-4997-b4d3-b2179c144868",
       "title": "",
       "fullFile": "C:\\Users\\gusta\\OneDrive\\Escritorio\\PruebaNODEJS\\historia5.js",
       "file": "\\historia5.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "44c9d523-3564-4a28-958f-a09684ef5f67",
+          "uuid": "e979f67a-6f59-42c0-a3d9-17cef74e8e0c",
           "title": "wikipedia",
           "fullFile": "C:\\Users\\gusta\\OneDrive\\Escritorio\\PruebaNODEJS\\historia5.js",
           "file": "\\historia5.js",
@@ -35,32 +35,32 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "Debería funcionar el menu correctamente",
-              "fullTitle": "wikipedia Debería funcionar el menu correctamente",
+              "title": "Debería iniciar sesion correctamente",
+              "fullTitle": "wikipedia Debería iniciar sesion correctamente",
               "timedOut": false,
-              "duration": 8884,
+              "duration": 9517,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "let driver = await new Builder().forBrowser('firefox').build();\ntry {\n  await driver.get('https://es.wikipedia.org/wiki/Wikipedia:Portada');\n  await driver.takeScreenshot().then(function(data) {\n    fs.writeFileSync('imagenes/Historia5/paso1.png', data, 'base64');\n  });\n  \n  await driver.wait(until.elementLocated(By.xpath('//*[@id=\"pt-login-2\"]/a/span')), 10000);\n  const button = await driver.findElement(By.xpath('//*[@id=\"pt-login-2\"]/a/span'));\n  await button.click();\n  await driver.get('https://es.wikipedia.org/w/index.php?title=Especial:Entrar&returnto=Wikipedia%3APortada');\n  await driver.takeScreenshot().then(function(data) {\n    fs.writeFileSync('imagenes/Historia5/paso2.png', data, 'base64');\n  });\n  await driver.wait(until.elementLocated(By.name('wpName')), 10000);\n  // Encontrar el input por su atributo name y enviar un valor\n  const inputElement = await driver.findElement(By.name('wpName'));\n  await inputElement.sendKeys('Gusv064');\n  await driver.takeScreenshot().then(function(data) {\n    fs.writeFileSync('imagenes/Historia5/paso3.png', data, 'base64');\n  });\n  await driver.wait(until.elementLocated(By.name('wpPassword')), 10000);\n  // Encontrar el input por su atributo name y enviar un valor\n  const inputElement2 = await driver.findElement(By.name('wpPassword'));\n  await inputElement2.sendKeys('redojoredojo');\n  await driver.takeScreenshot().then(function(data) {\n    fs.writeFileSync('imagenes/Historia5/paso4.png', data, 'base64');\n  });\n  await driver.wait(until.elementLocated(By.name('wploginattempt')), 10000);\n  const button2 = await driver.findElement(By.name('wploginattempt'));\n  await button2.click();\n  await driver.get('https://es.wikipedia.org/wiki/Wikipedia:Portada');\n  await driver.takeScreenshot().then(function(data) {\n    fs.writeFileSync('imagenes/Historia5/paso5.png', data, 'base64');\n  });\n  \n} catch (error) {\n  console.error('Error durante el inicio de sesión:', error);\n  // Si ocurre algún error, la prueba fallará\n  throw error;\n} finally {\n  await driver.quit();\n}",
+              "code": "let driver = await new Builder().forBrowser('firefox').build();\ntry {\n  await driver.get('https://es.wikipedia.org/wiki/Wikipedia:Portada');\n  await driver.takeScreenshot().then(function(data) {\n    fs.writeFileSync('imagenes/Historia5/paso1.png', data, 'base64');\n  });\n  \n  await driver.wait(until.elementLocated(By.xpath('//*[@id=\"pt-login-2\"]/a/span')), 10000);\n  const button = await driver.findElement(By.xpath('//*[@id=\"pt-login-2\"]/a/span'));\n  await button.click();\n  await driver.get('https://es.wikipedia.org/w/index.php?title=Especial:Entrar&returnto=Wikipedia%3APortada');\n  await driver.takeScreenshot().then(function(data) {\n    fs.writeFileSync('imagenes/Historia5/paso2.png', data, 'base64');\n  });\n  await driver.wait(until.elementLocated(By.name('wpName')), 10000);\n  const inputElement = await driver.findElement(By.name('wpName'));\n  await inputElement.sendKeys('Gusv064');\n  await driver.takeScreenshot().then(function(data) {\n    fs.writeFileSync('imagenes/Historia5/paso3.png', data, 'base64');\n  });\n  await driver.wait(until.elementLocated(By.name('wpPassword')), 10000);\n  const inputElement2 = await driver.findElement(By.name('wpPassword'));\n  await inputElement2.sendKeys('redojoredojo');\n  await driver.takeScreenshot().then(function(data) {\n    fs.writeFileSync('imagenes/Historia5/paso4.png', data, 'base64');\n  });\n  await driver.wait(until.elementLocated(By.name('wploginattempt')), 10000);\n  const button2 = await driver.findElement(By.name('wploginattempt'));\n  await button2.click();\n  await driver.get('https://es.wikipedia.org/wiki/Wikipedia:Portada');\n  await driver.takeScreenshot().then(function(data) {\n    fs.writeFileSync('imagenes/Historia5/paso5.png', data, 'base64');\n  });\n  \n} catch (error) {\n  console.error('Error durante el inicio de sesión:', error);\n  throw error;\n} finally {\n  await driver.quit();\n}",
               "err": {},
-              "uuid": "94c4d1d3-a9d5-4611-9ee0-43dd3a75ea27",
-              "parentUUID": "44c9d523-3564-4a28-958f-a09684ef5f67",
+              "uuid": "3efb29c8-ed52-492f-ad5d-fa92f0e4dc36",
+              "parentUUID": "e979f67a-6f59-42c0-a3d9-17cef74e8e0c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "94c4d1d3-a9d5-4611-9ee0-43dd3a75ea27"
+            "3efb29c8-ed52-492f-ad5d-fa92f0e4dc36"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 8884,
+          "duration": 9517,
           "root": false,
           "rootEmpty": false,
           "_timeout": 30000
